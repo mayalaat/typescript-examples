@@ -1,20 +1,27 @@
-- [parcel-bundler](https://www.npmjs.com/package/parcel-bundler)
+## Instalation
+
+### Adding [parcel-bundler](https://www.npmjs.com/package/parcel-bundler)
 
 ```bash
-# Adding parcel-bundler
 npm install -g parcel-bundler
 ```
 
-- [faker](https://github.com/faker-js/faker)
+### Adding [faker](https://github.com/faker-js/faker)
 
 ```bash
-# Adding faker
 npm install @faker-js/faker
 ```
 
-- [types/google.maps](https://developers.google.com/maps/documentation/javascript/using-typescript#Module_Import)
+### Adding [types/google.maps](https://developers.google.com/maps/documentation/javascript/using-typescript#Module_Import)
 
 ```bash
-# Adding types for google-maps
 npm install @types/google.maps
 ```
+
+## Run
+
+```bash
+parcel index.html
+```
+
+- Go to [http://localhost:1234/](http://localhost:1234/)
