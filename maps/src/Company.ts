@@ -1,11 +1,17 @@
 import { faker } from '@faker-js/faker';
+import { Mappable } from './CustoMap';
 
-export class Company {
+export class Company implements Mappable {
   name: string;
   catchPhrase: string;
   location: {
     lat: number;
     lon: number;
+  };
+
+  markerIcon: {
+    icon: google.maps.SymbolPath;
+    scale: number;
   };
 
   constructor() {
@@ -14,6 +20,10 @@ export class Company {
     this.location = {
       lat: parseFloat(faker.address.latitude()),
       lon: parseFloat(faker.address.longitude()),
+    };
+    this.markerIcon = {
+      icon: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+      scale: 10,
     };
   }
 

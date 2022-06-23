@@ -1,12 +1,13 @@
 /// <reference types="@types/google.maps" />
 
-import { Company } from './Company';
-import { User } from './User';
-
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     lon: number;
+  };
+  markerIcon: {
+    icon: google.maps.SymbolPath;
+    scale: number;
   };
 
   makerConten(): string;
@@ -34,6 +35,10 @@ export class CustomMap {
       position: {
         lat: mappable.location.lat,
         lng: mappable.location.lon,
+      },
+      icon: {
+        path: mappable.markerIcon.icon,
+        scale: mappable.markerIcon.scale,
       },
     });
 
