@@ -15,4 +15,10 @@ export class User {
       lon: parseFloat(faker.address.longitude()),
     };
   }
+
+  makerConten(): string {
+    return `
+    <h1>User name: ${this.name}</h1>
+    `;
+  }
 }
